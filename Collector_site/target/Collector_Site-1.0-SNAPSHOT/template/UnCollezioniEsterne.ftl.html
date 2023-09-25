@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<div id="UnCollezioniEsterneDiv">
+     <#if collezioniList?size != 0>
+            <#list collezioniList as c>
+                <div class="UnCollezioniEsterneContainer">
+                    <h1 style="color: #303841;"> ${c.nomeCollezione}</h1>
+                     <a class="UnCollezioniEsterneA" href="servletDiProvaRicercaGlobale?collezioneK=${c.key}"><img class="UnCollezioniEsterneImgInfo" ></a>
+                </div>
+            </#list>
+     <#else>
+            <#if error??>
+                 <h1 style="color: #303841;margin-left: 38%;"> non esiste la collezione cercata</h1>
+            <#else>
+                 <h1 style="color: #303841;margin-left: 38%;"> questo utente non ha collezioni</h1>
+            </#if>
+     </#if>
+        
+        
+        
+        
+        
+</div>
